@@ -1,0 +1,6 @@
+const GA_TRACKING_ID='UA-51512579-1';const AW_TRACKING_ID='AW-968753756';const setPageView=(win_obj)=>{if(win_obj.gtag)
+return win_obj.gtag('event','page_view',{'send_to':`${GA_TRACKING_ID}`});return null;}
+const setSessionConversion=(win_obj,email,cta_text)=>{let email_type=verifyGenericEmail(email);let email_validate;if(email_type=='valid'){email_validate="businessEmail";}else{email_validate=email_type;}
+if(win_obj.gtag){win_obj.gtag('event',cta_text,{'send_to':`${GA_TRACKING_ID}`,'event_category':"lead",'event_label':email_validate});}}
+const setBuyNow=(win_obj)=>{win_obj.gtag('event','click',{'send_to':`${GA_TRACKING_ID}`,'event_category':"buyNow"});}
+const setContentGroup=(win_obj,category_name,sub_category_name,template)=>{if(win_obj.gtag){win_obj.gtag('config',`${GA_TRACKING_ID}`,{'content_group1':category_name});win_obj.gtag('config',`${GA_TRACKING_ID}`,{'content_group2':sub_category_name?sub_category_name:'No Sub-Category'});win_obj.gtag('config',`${GA_TRACKING_ID}`,{'content_group3':template||'Default'});}}

@@ -1,0 +1,3 @@
+function toggleNav(nav,menu_toggle_button){nav.classList.toggle('open-nav-container');menu_toggle_button.classList.toggle('opened-menu');document.body.classList.toggle('no-scroll');$('.search-icon').toggle()}
+function addToggleNavListener(){const nav=document.querySelector('.nav-items-container');const menu_toggle_button=document.querySelector('.menu-toggle-button');menu_toggle_button.addEventListener('click',function(){toggleNav(nav,menu_toggle_button)},false);}
+if(document.readyState!=='loading'){addToggleNavListener();}else{document.addEventListener('DOMContentLoaded',function(){addToggleNavListener();});}

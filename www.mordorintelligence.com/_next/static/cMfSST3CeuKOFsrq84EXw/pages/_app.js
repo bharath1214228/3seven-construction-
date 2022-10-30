@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[35],{GcxT:function(n,w,o){(window.__NEXT_P=window.__NEXT_P||[]).push(["/_app",function(){return o("1TCz")}])}},[["GcxT",1,0]]]);
